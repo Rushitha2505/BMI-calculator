@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BMI Calculator Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Welcome Page -->
+  <section id="welcomePage" class="page active">
+    <h1>Welcome to BMI Health Analyzer</h1>
+    <p>Your journey to healthy living begins here.</p>
+    <button onclick="showPage('aboutPage')">Next</button>
+  </section>
+
+  <!-- About Me Page -->
+  <section id="aboutPage" class="page">
+    <h2>About Me</h2>
+    <p>This tool calculates BMI for children and adults. Based on your category, it provides health advice, diet, and exercise.</p>
+    <button onclick="showPage('bmiPage')">Next</button>
+  </section>
+
+  <!-- BMI Calculator Page -->
+  <section id="bmiPage" class="page">
+    <h2>BMI Calculator</h2>
+    <form id="bmiForm">
+      <label>Age: <input type="number" id="age" required></label><br>
+      <label>Gender:
+        <select id="gender">
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </label><br>
+      <label>Height: 
+        <input type="number" id="feet" placeholder="Feet" required> ft 
+        <input type="number" id="inches" placeholder="Inches" required> in
+      </label><br>
+      <label>Weight: <input type="number" id="weight" placeholder="kg" required></label><br>
+      <button type="button" onclick="calculateBMI()">Calculate BMI</button>
+    </form>
+  </section>
+
+  <!-- Output Page -->
+  <section id="outputPage" class="page">
+    <h2>Your BMI Result</h2>
+    <div id="resultDisplay"></div>
+    <button onclick="showPage('thankYouPage')">Next</button>
+  </section>
+
+  <!-- Thank You Page -->
+  <section id="thankYouPage" class="page">
+    <h2>Thank You!</h2>
+    <p>Stay healthy and fit! Refresh the page to calculate again.</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
